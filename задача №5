@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+bool is_palindrome(int n) {
+    std::string s = std::to_string(n);
+    return s == std::string(s.rbegin(), s.rend());
+}
+
+int main() {
+    for (int i = 1; i < 100; ++i) {
+        int square = i * i;
+        if (is_palindrome(i) && is_palindrome(square)) {
+            std::cout << i << " ";
+        }
+    }
+    return 0;
+}
